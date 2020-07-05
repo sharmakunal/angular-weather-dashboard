@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="input-group">
+			<input type="text" maxlength="20"
+      [(ngModel)]="cityName" (keyup.enter)="search()" [readonly]="isReadOnly" class="form-control" placeholder="{{placeHolder}}">
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-outline-secondary" (click)="edit()">Edit</button>
+				<button type="button" class="btn btn-outline-primary" (click)="search()">Search</button>
+			</div>
+		</div>
+	</div>
+	<div class="panel-body fixed-min-max-height">
+		<div class="panel-body text-center">
+			<p>{{errorMessage}}</p>
+			<img class="panel-profile-img" src="{{weatherIcon}}">
+			<p> <span>{{currentTemp}} {{tempInCelsius}} {{weatherDescription}}</span></p>
+		</div>
+	</div>
+</div>
